@@ -17,13 +17,16 @@ Kr = 1/((1-p)+p*k1/k2)
 KHSm = k_v-((1-p)*p*dk**2)/(3*k2-p*dk)
 KHSp = k_v-((1-p)*p*dk**2)/(3*k2+p*dk)
 
+Ka = (1-(1-p)*p/3*((dk/k_v)**2))*k_v/k1
+
 
 plt.plot(p, Kv, label="Voigt")
 plt.plot(p, Kr, label="Reuss")
 plt.plot(p, KHSm, label="Hashin-Shtrikman-")
 plt.plot(p, KHSp, label="Hashin-Shtrikman+")
+plt.plot(p, Ka, label="Second-order approximation")
 plt.legend()
 plt.axis('equal')
-plt.xlabel('density p2')
-plt.ylabel('k*/k0')
+plt.xlabel('density $p_2$')
+plt.ylabel(r'${k*/k_0}$')
 plt.show()

@@ -1,6 +1,4 @@
 from functions import t_basis as tb
-
-
 lya = 1
 mu = 1
 C1 = [lya+mu, 2*mu, lya, lya, 4*mu, lya+2*mu]
