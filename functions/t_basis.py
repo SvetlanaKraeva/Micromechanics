@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def inverse_tensor(t):
     delta = 2 * (t[0] * t[5] - t[2] * t[3])
     i_t = np.zeros(6)
@@ -23,3 +24,8 @@ def t_multiply(t1, t2):
     t_n[5] = 2 * t1[3] * t2[2] + t1[5] * t2[5]
     t_n = np.around(t_n, decimals=15)
     return t_n
+
+
+def get_C(lya, mu):
+    C = [lya + mu, 2 * mu, lya, lya, 4 * mu, lya + 2 * mu]
+    return C
