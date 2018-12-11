@@ -27,5 +27,5 @@ def t_multiply(t1, t2):
 
 
 def get_C(lya, mu):
-    C = [lya + mu, 2 * mu, lya, lya, 4 * mu, lya + 2 * mu]
+    C = np.array([lya + mu, 2 * mu, lya, lya, 4 * mu, lya + 2 * mu])
     return C
